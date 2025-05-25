@@ -1,6 +1,17 @@
 # Maze Solver
 from tkinter import Tk, BOTH, Canvas
 
+# Catpuccin theme for colors
+CATPPUCCIN = {
+    "background": "#313244",
+    "wall": "#89b4fa",
+    "path": "#cba6f7",
+    "visited": "#eba0ac",
+    "start": "#94e2d5",
+    "end": "#a6e3a1",
+    "highlight": "#f9e2af"
+}
+
 
 class Point:
     """A simple class to represent a point in 2D space.
@@ -20,9 +31,11 @@ class Line:
         self.start = start
         self.end = end
 
-    def draw(self, canvas: Canvas, fill_color: str) -> None:
+    def draw(self, canvas: Canvas, fill_color: str = "black") -> None:
         """
         Draw the line on the provided canvas.
+        :param canvas: The canvas to draw on.
+        :param fill_color: The color to fill the line with. Defaults to "black".
         """
         canvas.create_line(self.start.x, self.start.y, self.end.x, self.end.y, fill=fill_color, width=2)
 
@@ -31,7 +44,7 @@ class Window:
     def __init__(self, width: int, height: int) -> None:
         self.__root = Tk()
         self.__root.title("Maze Solver")
-        self.__canvas = Canvas(self.__root, width=width, height=height, bg="gray")
+        self.__canvas = Canvas(self.__root, width=width, height=height, bg=CATPPUCCIN["background"])
         self.__canvas.pack()
         self.__running = False
         self.__root.protocol("WM_DELETE_WINDOW", self.close)
@@ -65,6 +78,9 @@ class Window:
         :param Line: The line to draw, which should have a start and end Point.
         :param fill_color: The color to fill the line with.
         """
-        x1, y1 = line.start.x, line.start.y
-        x2, y2 = line.end.x, line.end.y
-        self.__canvas.create_line(x1, y1, x2, y2, fill=fill_color, width=2)
+        line.draw(self.__canvas, fill_color)
+
+
+class Cell:
+    def __init__(self, window: Window):
+        pass  # Placeholder for future implementation
