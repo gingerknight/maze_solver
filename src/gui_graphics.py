@@ -1,5 +1,5 @@
 # Maze Solver
-from tkinter import Tk, BOTH, Canvas
+from tkinter import Tk, Canvas
 
 # Catpuccin theme for colors
 CATPPUCCIN = {
@@ -9,7 +9,7 @@ CATPPUCCIN = {
     "visited": "#eba0ac",
     "start": "#94e2d5",
     "end": "#a6e3a1",
-    "highlight": "#f9e2af"
+    "highlight": "#f9e2af",
 }
 
 
@@ -79,8 +79,3 @@ class Window:
         :param fill_color: The color to fill the line with.
         """
         line.draw(self.__canvas, fill_color)
-
-
-class Cell:
-    def __init__(self, window: Window):
-        pass  # Placeholder for future implementation
