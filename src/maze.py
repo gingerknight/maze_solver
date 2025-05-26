@@ -4,7 +4,7 @@ from typing import Optional, List
 import random
 
 # application imports
-from src.gui_graphics import Window, Line, Point, CATPPUCCIN
+from src.gui_graphics import Window
 from src.cells import Cell
 
 

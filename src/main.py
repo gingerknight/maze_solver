@@ -1,6 +1,5 @@
 # Maze Solver
 from src.gui_graphics import Window
-from src.cells import Cell
 from src.maze import Maze
 
 
@@ -15,8 +14,6 @@ def main():
     num_cols = 15
     x1 = 50
     y1 = 50
-    cells = []
-    # def __init__(self, x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, win: Window):
     maze = Maze(x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, window)
 
     # Solve the maze
