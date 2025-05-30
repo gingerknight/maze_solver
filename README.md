@@ -9,10 +9,6 @@ A Python-based maze generator and solver using a recursive backtracking algorith
 - Unit-tested core logic (cell creation, wall breaking, solving path)
 - Support for deterministic randomness via a user-defined seed
 
-## Demo
-
-![Maze demo gif or screenshot here, if available]
-
 ## How It Works
 
 - **Maze Generation**:
@@ -97,6 +93,3 @@ MIT License
 
 Built with love and recursion 🌀
 
----
-
-Let me know if you'd like a version tailored more toward teaching, deploying online (e.g., with Tkinter/Pygame), or demoing in a portfolio.
